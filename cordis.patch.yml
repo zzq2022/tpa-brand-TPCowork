@@ -1,0 +1,22 @@
+- id: ui-brand-official
+  disabled: true
+- insert:
+    - id: ui-brand-tpcowork
+      name: '@tpcowork/ui-brand-tpcowork'
+- id: agent-default-model
+  config:
+    provider: tpa-default
+    model: deepseek_v4_flash
+- id: llm-pi-ai
+  config:
+    providers:
+      tpa-default:
+        displayName: TPCowork
+        apiKeyEnv: TPCOWORK_API_KEY
+        api: openai-completions
+        baseURL: http://192.168.0.228:1025/v1
+        models:
+          - id: deepseek_v4_flash
+            name: DeepSeek V4 Flash
+            contextWindow: 128000
+            maxTokens: 8192
